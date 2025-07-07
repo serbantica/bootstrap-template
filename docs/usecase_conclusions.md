@@ -2,8 +2,6 @@ Perfect! That's an excellent approach. You've successfully created a comprehensi
 
 ## 🎯 **What You've Accomplished**
 
-### **Template Strategy:**
-- **[`charter_template.md`](charter_template.md)** - Remains as the reusable template for future projects
 - **[`charter.md`](charter.md)** - Contains your specific IBM Watsonx Orchestrate supply chain use case
 
 ### **Your Use Case Summary in [`charter.md`](charter.md) is Outstanding:**
