@@ -1,5 +1,41 @@
 # 🚀 Project Bootstrap Setup Guide
 
+## 🎯 **Quick Start: Where to Run the Scripts**
+
+### **⚠️ Important: Run in Your New Project Directory**
+
+The bootstrap scripts should be run **in your new project directory**, not in the template directory itself.
+
+### **📁 Recommended Workflow**
+```bash
+# 1. Create your new project directory
+mkdir my-awesome-project
+cd my-awesome-project
+
+# 2. Initialize git repository
+git init
+
+# 3. Copy bootstrap scripts from template
+cp /path/to/template/validate_bootstrap.sh .
+cp /path/to/template/project_bootstrap.sh .
+
+# 4. Make scripts executable
+chmod +x validate_bootstrap.sh project_bootstrap.sh
+
+# 5. Run validation in your new project directory
+./validate_bootstrap.sh
+
+# 6. Run bootstrap (choose your path below)
+```
+
+### **✅ What the Validation Script Checks**
+- **Git repository**: Ensures `.git` folder exists in current directory
+- **Python 3.11+**: Validates correct Python version
+- **Write permissions**: Confirms you can create files
+- **Script permissions**: Ensures scripts are executable
+
+---
+
 ## 🎯 **Two Setup Paths Available**
 
 ### 🚀 **Path 1: Auto-Setup (Recommended)**
@@ -18,15 +54,11 @@ validate_bootstrap.sh         # Pre-flight validation script
 
 ---
 
-## 🎯 **Setup Options: Choose Your Path**
-
----
-
-## � **Path 1: Auto-Setup (Complete Automation)**
+## ⚡ **Path 1: Auto-Setup (Complete Automation)**
 
 ### **Prerequisites**
 ```bash
-# Validate environment first
+# Validate environment first (in your new project directory)
 ./validate_bootstrap.sh
 ```
 
@@ -60,7 +92,7 @@ make test
 
 ---
 
-## � **Path 2: Manual Setup (Step-by-Step Control)**
+## 🔧 **Path 2: Manual Setup (Step-by-Step Control)**
 
 ### **Prerequisites**
 ```bash
@@ -200,7 +232,7 @@ After completing the setup, verify:
 
 ---
 
-## � **Quick Start Commands**
+## 🚀 **Quick Start Commands**
 
 ### **Auto-Setup (Recommended)**
 ```bash
@@ -301,6 +333,48 @@ chmod +x project_bootstrap.sh validate_bootstrap.sh
 ### **Use Forever**
 ```bash
 # For each new project
+mkdir my-new-project
+cd my-new-project
+cp ~/project-templates/bootstrap-template/* .
+
+# Choose your path:
+./project_bootstrap.sh my-project    # Auto-setup
+# OR
+make help && make validate          # Manual setup
+```
+
+---
+
+## 🎯 **Success Metrics**
+
+✅ **Environment Ready**: Python 3.11+, uv, all tools installed  
+✅ **Project Structure**: All directories and files created  
+✅ **Tests Passing**: `make test` runs successfully  
+✅ **Application Running**: `make run` executes without errors  
+✅ **Documentation Started**: Charter and templates ready for customization  
+✅ **Development Ready**: Ready to implement your specific features  
+
+**Goal**: Empty directory → Fully functional Python project in **under 10 minutes**
+
+---
+
+## 💡 **Next Steps After Setup**
+
+1. **Define Your Project**: Edit `docs/charter.md` with your specific use case
+2. **Configure Dependencies**: Update `pyproject.toml` with required packages
+3. **Implement Features**: Add your code in `src/` directories
+4. **Write Tests**: Expand `tests/` with comprehensive test coverage
+5. **Setup CI/CD**: Configure `pipelines/` for automated testing and deployment
+6. **Deploy**: Use `make deploy-azure` or your preferred deployment method
+
+---
+
+## 📚 **Additional Resources**
+
+- **uv Documentation**: https://github.com/astral-sh/uv
+- **Modern Python Projects**: https://packaging.python.org/en/latest/
+- **Makefile Best Practices**: https://www.gnu.org/software/make/manual/
+- **Git Workflows**: https://git-scm.com/book/en/v2
 mkdir my-new-project
 cd my-new-project
 cp ~/project-templates/bootstrap-template/* .
